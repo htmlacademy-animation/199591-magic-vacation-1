@@ -87,8 +87,9 @@
   top: 100%;
   right: 0;
   margin-top: 1.5rem;
-  opacity: 0;
+  // opacity: 0;
   pointer-events: none;
+  // transition: top 3s ease-in-out;
 
   @media (min-width: $stop-scaling) {
     margin-top: 15px;
@@ -130,6 +131,7 @@
   &:hover {
     opacity: 1;
     pointer-events: auto;
+
   }
 
   &:focus-within {
@@ -137,12 +139,9 @@
     pointer-events: auto;
   }
 
-  .social-block--active & {
-    opacity: 1;
-    pointer-events: auto;
-  }
 
   li {
+    transition: all 1s ease-in-out;
     flex: none;
     margin-bottom: 0.5rem;
 
@@ -158,6 +157,33 @@
       margin: 0 1.25rem;
     }
   }
+
+  .social-block__link--fb,
+  .social-block__link--insta,
+  .social-block__link--vk {
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+  }
+
+
+  .social-block--active & {
+    opacity: 1;
+    pointer-events: auto;
+
+    .social-block__link--fb {
+      opacity: 1;
+      transition: opacity 0.7s ease-in-out;
+    }
+    .social-block__link--insta {
+      opacity: 1;
+      transition: opacity 0.7s ease-in-out 0.4s;
+    }
+    .social-block__link--vk {
+      opacity: 1;
+      transition: opacity 0.7s ease-in-out 0.8s;
+    }
+
+  }
 }
 
 .social-block__link {
@@ -168,6 +194,7 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+
 
   @media (min-width: $stop-scaling) {
     width: 40px;
