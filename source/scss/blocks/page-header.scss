@@ -37,7 +37,7 @@
   color: $c-light;
   transform: translateX(-60%);
   opacity: 0;
-  transition: transform 0.7s cubic-bezier(0.17, 0.67, 0.51, 0.93), opacity 1s ease;
+  transition: transform 0.7s $timing-func-elastic-ball, opacity 1s ease;
 
   .load-end & {
     opacity: 1;
@@ -140,7 +140,7 @@
   display: flex;
   align-items: center;
   opacity: 0;
-  transition: opacity 2s cubic-bezier(0.17, 0.67, 0.51, 0.93), transform 0.5s ease;
+  transition: opacity 2s ease, transform 0.5s ease;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     position: fixed;
@@ -313,7 +313,8 @@
 .page-header__social {
   margin-left: 4.8rem;
   transform: scale(0.5);
-  transition: transform 0.6s cubic-bezier(.72,.18,.34,1.51);
+  transition: transform 0.6s $timing-func-elastic-ball;
+
 
   @media (min-width: $stop-scaling) {
     margin-left: 48px;
