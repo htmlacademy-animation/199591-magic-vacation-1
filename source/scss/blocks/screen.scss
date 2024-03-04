@@ -47,7 +47,7 @@
   background-color: $c-light;
   z-index: 1;
   transform: translateY(110%);
-  transition: transform 0.7s cubic-bezier(0.17, 0.67, 0.51, 0.93);
+  transition: transform 0.7s $timing-func-elastic-ball;
 
   .load-end & {
     transform: translateY(0);
