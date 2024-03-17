@@ -96,7 +96,7 @@
     height: 4rem;
     font-size: 1.6rem;
 
-    .active & {
+    .active &{
       width: calc(100% - 5rem);
     }
   }
@@ -152,6 +152,11 @@
 .form--result {
   .form__field {
     width: calc(100% - 31rem);
+    animation: expand--form--result;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+    animation-delay: 2s;
 
     @media (min-width: $stop-scaling) {
       width: calc(100% - 310px);
@@ -169,4 +174,13 @@
       width: calc(100% - 5rem);
     }
   }
+
+}
+
+.screen--show .form__button {
+  animation: fadeIn--form__button;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+  animation-duration: 0.5s;
+  animation-delay: 2s;
 }

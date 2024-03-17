@@ -70,7 +70,7 @@
   text-transform: uppercase;
   font-family: $font-alt;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size:  4.8rem;
   line-height: 0.906;
   letter-spacing: -0.04em;
 
@@ -88,12 +88,6 @@
     margin-left: -2.5rem;
     font-size: 3rem;
   }
-}
-
-.active .slider__item-title {
-  font-size: 4.8rem;
-  min-height: 4.9rem;
-  transition: all 0.8s ease-out;
 }
 
 .slider__item-text {
