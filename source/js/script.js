@@ -26,11 +26,11 @@ social();
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
 
-function animationTitleText(elem, offset) {
+function animationTitleText(elem, offset = 500) {
   const animationTopScreenTextLine = new AccentTextBuild(
     elem,
     500,
-    `active`,
+    `text-ready`,
     `transform`
   );
   setTimeout(() => {
@@ -38,9 +38,9 @@ function animationTitleText(elem, offset) {
   }, offset);
 }
 
-animationTitleText(".intro__title", 1000);
-animationTitleText(".prizes__title", 2000);
-animationTitleText(".slider__item-title", 2000);
-animationTitleText(".rules__title", 500);
-animationTitleText(".game__title", 500);
-animationTitleText(".intro__date", 2800);
+animationTitleText(".intro__title");
+animationTitleText(".intro__date", 1000);
+animationTitleText(".prizes__title");
+animationTitleText(".slider__item-title");
+animationTitleText(".rules__title");
+animationTitleText(".game__title");

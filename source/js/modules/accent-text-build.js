@@ -10,7 +10,7 @@ export default class AccentTextBuild {
     this._element = document.querySelector(this._elementSelector);
     this._timeOffset = 100;
 
-    this.prePareText();
+    this.prepareText();
   }
 
   createElement(letter, index) {
@@ -24,18 +24,18 @@ export default class AccentTextBuild {
     return span;
   }
 
-  prePareText() {
+  prepareText() {
     if (!this._element) {
       return;
     }
     const text = this._element.textContent
       .trim()
-      .split(` `)
-      .filter((latter) => latter !== "");
+      .split(/\s+/)
+      .filter((letter) => letter !== "");
 
     const content = text.reduce((fragmentParent, word) => {
-      const wordElement = Array.from(word).reduce((fragment, latter, index) => {
-        fragment.appendChild(this.createElement(latter, index));
+      const wordElement = Array.from(word).reduce((fragment, letter, index) => {
+        fragment.appendChild(this.createElement(letter, index));
         return fragment;
       }, document.createDocumentFragment());
       const wordContainer = document.createElement(`span`);

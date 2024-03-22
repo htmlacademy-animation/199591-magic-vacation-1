@@ -94,12 +94,10 @@
 
 @keyframes zoomIn--suitcase {
   0% {
-    width: 0;
-    transform: translateY(100%);
+    transform: translateY(100%) scale(0);
   }
   100% {
-    width: 36rem;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
