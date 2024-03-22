@@ -191,6 +191,11 @@
     width: 1rem;
     height: 2rem;
     pointer-events: none;
+    animation: fadeIn-controls;
+    animation-duration: $basic-duration;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    animation-delay: $basic-duration/2;
 
     @media (min-width: $stop-scaling) {
       width: 10px;
@@ -231,6 +236,19 @@
   &.swiper-button-disabled {
     opacity: 0.5;
     pointer-events: none;
+  }
+
+  &--prev {
+    animation: roll-control-prev;
+    animation-duration: $basic-duration;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+  }
+  &--next {
+    animation: roll-control-next;
+    animation-duration: $basic-duration;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
   }
 }
 

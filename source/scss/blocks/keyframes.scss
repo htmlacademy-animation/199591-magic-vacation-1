@@ -143,3 +143,53 @@
     opacity: 1;
   }
 }
+
+@keyframes fadeIn-controls {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes roll-control-prev {
+  0% {
+    opacity: 0;
+    transform:  translateX(-100%) rotate(-100deg);
+  }
+  100% {
+    opacity: 1;
+    transform:  translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes roll-control-next {
+  0% {
+    opacity: 0;
+    transform:  translateX(100%) rotate(100deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes rollInRight-result-button {
+  0% {
+    transform:  translateX(100%) rotate(100deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+
+@keyframes fadeIn-result-button {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
