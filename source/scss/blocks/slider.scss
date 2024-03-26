@@ -167,7 +167,7 @@
   position: relative;
   width: 4rem;
   height: 4rem;
-  color: $c-dark;
+  color: var(--primary-color);
 
   @media (min-width: $stop-scaling) {
     width: 40px;
@@ -204,7 +204,7 @@
   }
 
   &:hover {
-    color: $c-purple;
+    color: var(--secondary-color);
 
     &::before {
       width: 112.5%;
@@ -213,11 +213,11 @@
   }
 
   &:focus {
-    color: $c-purple;
+    color: var(--secondary-color);
     outline: none;
 
     &::before {
-      border-color: $c-purple;
+      border-color: var(--secondary-color);
     }
   }
 
@@ -228,8 +228,8 @@
     &::before {
       width: 100%;
       height: 100%;
-      background-color: $c-purple;
-      border-color: $c-purple;
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color);
     }
   }
 
