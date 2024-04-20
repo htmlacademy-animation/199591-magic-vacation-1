@@ -83,11 +83,7 @@
   font-size: 2.4rem;
   line-height: 1.2;
   color: $c-light;
-
-  animation: fadeIn-result-button;
-  animation-duration: $basic-duration;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
+  @include animation-keyframe(fadeIn-result-button, $basic-duration);
 
   @media (min-width: $stop-scaling) {
     margin: auto auto 10px;

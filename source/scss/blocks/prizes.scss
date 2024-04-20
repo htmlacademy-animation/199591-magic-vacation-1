@@ -127,6 +127,12 @@
   }
 
   &--journeys {
+    @include animation-keyframe(slideOutLeft-journes-desktop, $basic-duration, $prizes-delay-icon1);
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      @include animation-keyframe(slideOutLeft-journes-mobile, $basic-duration, $prizes-delay-icon1);
+    }
+
     .prizes__icon {
       position: relative;
       left: -5.9rem;
@@ -157,6 +163,7 @@
   }
 
   &--cases {
+    @include animation-keyframe(fadeIn-case, $basic-duration*2, $prizes-delay-icon1);
     margin-left: 7rem;
 
     @media (min-width: $stop-scaling) {
@@ -191,6 +198,9 @@
   }
 
   &--codes {
+    @include animation-keyframe(fadeIn-codes, $basic-duration, $prizes-delay-icon2);
+
+
     @media (max-width: $tablet) and (orientation: portrait) {
       padding-left: 0.8rem;
     }
@@ -328,5 +338,46 @@
       width: 0.5rem;
       height: 0.5rem;
     }
+  }
+}
+
+
+@keyframes slideOutLeft-journes-desktop {
+  0% {
+    transform: translate(80%);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes slideOutLeft-journes-mobile {
+  0% {
+    transform: translate3D(50%, 100%, 0);
+  }
+
+  100% {
+    transform: translate3D(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn-case {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn-codes {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
