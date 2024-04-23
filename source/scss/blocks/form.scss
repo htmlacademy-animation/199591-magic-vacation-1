@@ -30,8 +30,6 @@
   }
 }
 
-
-
 .form__field {
   flex: none;
   margin-right: 3rem;
@@ -96,13 +94,11 @@
     height: 4rem;
     font-size: 1.6rem;
 
-    .active &{
+    .active & {
       width: calc(100% - 5rem);
     }
   }
-
 }
-
 
 .form__button {
   @media (orientation: portrait) {
@@ -174,7 +170,6 @@
       width: calc(100% - 5rem);
     }
   }
-
 }
 
 .screen--show .form__button {

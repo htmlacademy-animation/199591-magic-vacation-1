@@ -186,7 +186,6 @@
   }
 
   @for $i from 1 through 4 {
-
     &:nth-child(#{$i})::before {
       animation: zoomIn--rules__item;
       animation-timing-function: $timing-func-elastic-ball;
