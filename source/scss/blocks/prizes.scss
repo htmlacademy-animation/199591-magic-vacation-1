@@ -176,10 +176,10 @@
     }
 
     .prizes__icon {
-      width: 18.8rem;
+      width: 26.8rem;
 
       @media (min-width: $stop-scaling) {
-        width: 188px;
+        width: 268px;
       }
 
       @media (max-width: $tablet) and (orientation: portrait) {
@@ -354,11 +354,11 @@
 
 @keyframes slideOutLeft-journes-mobile {
   0% {
-    transform: translate3D(50%, 100%, 0);
+    transform: translate3d(50%, 100%, 0);
   }
 
   100% {
-    transform: translate3D(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
